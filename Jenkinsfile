@@ -37,6 +37,7 @@ pipeline{
         stage("deploy") {
             steps {
                 echo 'deploy stage is running'
+		sh 'sudo scp -i /home/ubuntu/key-value-pair-20879.pem -o StrictHostKeyChecking=no -r /var/lib/jenkins/workspace/Pipeline/  ec2-18-234-167-65.compute-1.amazonaws.com:/tmp'
             }
         }
     }
