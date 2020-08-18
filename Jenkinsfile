@@ -21,7 +21,7 @@ pipeline{
 		sh 'PATH=$WORKSPACE/venv/bin:/usr/local/bin:$PATH'
 		sh 'virtualenv venv'
 		sh 'cd venv/bin/'
-		sh 'source activate'
+		sh 'python3 test_farecalculationsystem.py'
 		    
 		
 		//sh 'python test_farecalculationsystem.py' 
