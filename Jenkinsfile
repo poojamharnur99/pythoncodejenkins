@@ -18,4 +18,9 @@ pipeline{
             }
         }
     }
+    post {
+        failure {
+            echo 'building is failed'
+        }
+    }
 }
