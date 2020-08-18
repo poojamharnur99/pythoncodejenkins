@@ -21,8 +21,8 @@ pipeline{
 		sh 'PATH=$WORKSPACE/venv/bin:/usr/local/bin:$PATH'
 		sh 'virtualenv venv'
 		sh 'cd venv/bin/'
-		sh 'sudo apt-get update -y'
-		sh 'sudo apt-get install -y pylint'
+		sh 'apt-get update -y'
+		sh 'apt-get install -y pylint'
             }
             
         }
