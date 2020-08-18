@@ -29,6 +29,7 @@ pipeline{
             steps {
                 echo 'testing stage is running'
 		sh 'python3 test_farecalculationsystem.py'
+		sh 'pylint farecalculationsystem.py'
 		
 		
             }
