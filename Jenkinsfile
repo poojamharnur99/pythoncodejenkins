@@ -18,6 +18,7 @@ pipeline{
                 echo 'build stage is running'
 		sh 'ls' 
 		sh 'PATH=$WORKSPACE/venv/bin:/usr/local/bin:$PATH'
+		sh 'sudo su'
 		sh 'apt-get install python-virtualenv'
 		sh 'virtualenv -p /usr/bin/python3 virtualenvironment/myvenv'
 		sh 'cd virtualenvironment/myvenv/bin'
