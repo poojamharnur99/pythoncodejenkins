@@ -1,6 +1,12 @@
 pipeline{
     agent any 
     stages {
+	stage("Cleanupworkspace") { 
+      	    steps {
+            	cleanWs()
+     	    }
+	}	
+  
 	stage("Checkout") { 
       	    steps {
                 checkout scm
@@ -8,6 +14,7 @@ pipeline{
 	}	
         stage("build") {
             steps {
+	
                 echo 'build stage is running'
 		sh 'ls' 
 		sh 'python test_farecalculationsystem.py' 
@@ -29,5 +36,6 @@ pipeline{
         failure {
             echo 'building is failed'
         }
+	
     }
 }
