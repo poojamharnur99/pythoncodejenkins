@@ -1,5 +1,5 @@
 pipeline{
-    agent { image 'python:3.7.1' } 
+    agent { image 'python:3.5.1' } 
     stages {
         stage("build") {
             steps {
