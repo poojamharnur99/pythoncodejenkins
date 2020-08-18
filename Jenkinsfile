@@ -17,7 +17,8 @@ pipeline{
 	
                 echo 'build stage is running'
 		sh 'ls' 
-		sh 'python test_farecalculationsystem.py' 
+		sh 'ssh -i "key-value-pair-20879.pem" ubuntu@ec2-34-207-55-251.compute-1.amazonaws.com'
+		//sh 'python test_farecalculationsystem.py' 
             }
             
         }
