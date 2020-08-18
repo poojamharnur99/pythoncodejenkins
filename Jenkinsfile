@@ -37,6 +37,8 @@ pipeline{
 		sh "sudo ssh -i 'key-v-pooja.pem' ubuntu@ec2-54-242-218-60.compute-1.amazonaws.com"
 		sh 'cd /tmp'
 		sh 'ls'
+		sh 'cd venv/bin/'
+		sh 'python3 test_farecalculationsystem.py'
 		//sh 'sudo scp -i /home/ubuntu/key-value-pair-20879.pem -o StrictHostKeyChecking=no -r /var/lib/jenkins/workspace/Pipeline/  ec2-18-234-167-65.compute-1.amazonaws.com:/tmp'
             }
         }
