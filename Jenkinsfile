@@ -21,8 +21,7 @@ pipeline{
 		sh 'PATH=$WORKSPACE/venv/bin:/usr/local/bin:$PATH'
 		sh 'virtualenv venv'
 		sh 'cd venv/bin/'
-		sh 'apt-get update'
-		sh 'apt-get install pylint'
+		sh 'venv/bin/python3 pylint farecalculationsystem.py'
             }
             
         }
