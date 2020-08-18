@@ -1,10 +1,15 @@
 pipeline{
-    agent { docker { image 'python:3.5.1' } } 
+    agent any 
     stages {
+	stage("Checkout") { 
+      	    steps {
+                checkout scm
+     	    }
+	}	
         stage("build") {
             steps {
                 echo 'build stage is running'
-		sh 'python --version' 
+		sh 'ls' 
             }
             
         }
