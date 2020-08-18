@@ -1,12 +1,10 @@
 pipeline{
-    agent any
+    agent { docker { image 'python:3.5.1' } }
     stages {
         stage("build") {
             steps {
                 echo 'build stage is running'
-		sh 'python --version'		
-                sh 'chmod +x test_farecalculationsystem.py'
-                sh './test_farecalculationsystem.py' 
+		sh 'python --version' 
             }
             
         }
