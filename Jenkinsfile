@@ -4,6 +4,8 @@ pipeline{
         stage("build") {
             steps {
                 echo 'build stage is running'
+                sh 'chmod +x test_farecalculationsystem.py'
+                sh './test_farecalculationsystem.py' 
             }
             
         }
