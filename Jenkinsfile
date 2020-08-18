@@ -18,11 +18,10 @@ pipeline{
                 echo 'build stage is running'
 		sh 'ls' 
 		sh 'PATH=$WORKSPACE/venv/bin:/usr/local/bin:$PATH'
-		sh 'sudo su'
-		sh 'apt-get install python-virtualenv'
-		sh 'virtualenv -p /usr/bin/python3 virtualenvironment/myvenv'
-		sh 'cd virtualenvironment/myvenv/bin'
-		sh 'source activate'
+		if [ ! -d "venv" ]; then
+        		virtualenv venv
+		fi
+		. venv/bin/activate
 		//sh 'python test_farecalculationsystem.py' 
             }
             
