@@ -22,6 +22,7 @@ pipeline{
 		sh 'virtualenv venv'
 		sh 'cd venv/bin/'
 		sh 'python3 test_farecalculationsystem.py'
+		sh 'cd python3'
 		sh 'pylint farecalculationsystem.py'
 		    
 		
