@@ -17,8 +17,9 @@ pipeline{
 	
                 echo 'build stage is running'
 		sh 'ls' 
-		sh 'virtualenv venv'
+		
 		sh 'PATH=$WORKSPACE/venv/bin:/usr/local/bin:$PATH'
+		sh 'virtualenv venv'
 		
 		//sh 'python test_farecalculationsystem.py' 
             }
