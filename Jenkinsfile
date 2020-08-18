@@ -35,7 +35,6 @@ pipeline{
                 echo 'deploy stage is running'
 		sh "sudo ssh -i 'key-v-pooja.pem' ubuntu@ec2-54-242-218-60.compute-1.amazonaws.com"
 		sh 'cd /tmp'
-		sh 'sudo rm -rf *'
 		sh "sudo scp -i 'key-v-pooja.pem' -o StrictHostKeyChecking=no -r * ubuntu@ec2-54-242-218-60.compute-1.amazonaws.com:/tmp"
 		sh 'ls'
 		sh 'cd venv/bin/'
