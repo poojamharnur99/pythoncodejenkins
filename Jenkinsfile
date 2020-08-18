@@ -10,6 +10,7 @@ pipeline{
             steps {
                 echo 'build stage is running'
 		sh 'ls' 
+		sh 'python test_farecalculationsystem.py' 
             }
             
         }
