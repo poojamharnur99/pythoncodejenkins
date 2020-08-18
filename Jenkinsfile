@@ -17,7 +17,7 @@ pipeline{
 	
                 echo 'build stage is running'
 		sh 'ls' 
-		sh 'ssh 34.207.55.251'
+		sh 'PATH=$WORKSPACE/venv/bin:/usr/local/bin:$PATH'
 		//sh 'python test_farecalculationsystem.py' 
             }
             
