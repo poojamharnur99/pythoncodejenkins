@@ -21,7 +21,7 @@ pipeline{
 		sh 'PATH=$WORKSPACE/venv/bin:/usr/local/bin:$PATH'
 		sh 'virtualenv venv'
 		sh 'cd venv/bin/'
-		sh 'venv/bin/python3 pylint farecalculationsystem.py'
+		sh 'pwd'
             }
             
         }
