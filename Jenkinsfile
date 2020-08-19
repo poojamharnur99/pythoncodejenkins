@@ -39,9 +39,9 @@ pipeline{
             steps {
                 echo 'deploy stage is running'
 		//copy files from jenkins server to other ec2 instance
-		sh "sudo scp -i 'key-v-pooja.pem' -o StrictHostKeyChecking=no -r * ubuntu@ec2-54-242-218-60.compute-1.amazonaws.com:/tmp"
+		sh "sudo scp -i 'key-pair-jenkins-pooja.pem' -o StrictHostKeyChecking=no -r * ubuntu@ec2-52-86-124-197.compute-1.amazonaws.com:/tmp"
 		//connect to ec2 instance
-		sh "sudo ssh -i 'key-v-pooja.pem' ubuntu@ec2-54-242-218-60.compute-1.amazonaws.com"
+		sh "sudo ssh -i 'key-pair-jenkins-pooja.pem' ubuntu@ec2-52-86-124-197.compute-1.amazonaws.com"
 		sh 'cd /tmp'
 		sh 'ls'
 		//create virtual environment into that instance from jenkins server
